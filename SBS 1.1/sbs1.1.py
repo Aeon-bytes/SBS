@@ -1,5 +1,5 @@
 #Slot Booking Script
-#SBS1.1
+#SBS 1.1
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
