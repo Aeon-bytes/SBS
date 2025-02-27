@@ -59,11 +59,11 @@ if __name__=='__main__':
     input_element1 = driver.find_element(By.CSS_SELECTOR, '.css-8mmkcg')
     input_element1.click()
 
-    input_element1 = driver.find_element(By.CSS_SELECTOR, '.css-d7l1ni-option')
-    input_element1.click()
+    input_element2 = driver.find_element(By.CSS_SELECTOR, '.css-d7l1ni-option')
+    input_element2.click()
     
-    input_element = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
-    input_element.click()
+    input_element3 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
+    input_element3.click()
 
     time.sleep(10)
 
