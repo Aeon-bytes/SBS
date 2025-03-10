@@ -64,12 +64,11 @@ if __name__=='__main__':
     input_element2 = driver.find_element(By.CSS_SELECTOR, '.css-d7l1ni-option')
     input_element2.click()
     
-    """input_element3 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
-    input_element3.click()"""
+    input_element3 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
+    input_element3.click()
 
     # Open a new tab
     driver.execute_script("window.open('');")
-    time.sleep(1)
 
     # Switch to the new tab and open another URL
     driver.switch_to.window(driver.window_handles[1])
@@ -77,30 +76,25 @@ if __name__=='__main__':
     time.sleep(1)
 
     #Special thanks to Youtube, GeeksforGeeks and ChatGPT for this marvelous SBS 1.2
-
-    elements2025 = driver.find_elements(By.XPATH, "//*[@name[contains(., '2025')]]")
     
-    # Check if at least 3 elements exist
-    if len(elements2025) >= 3:
-        third_element = elements2025[2]
-        
-        # Print the 'name' attribute
-        print("3rd Element Name:", third_element.get_attribute("name"))
-        
-        # Click the 3rd element
-        input_element6 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-4')
-        input_element6.click()
+    # Click the 3rd element
+    input_element6 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-4')
+    input_element6.click()
 
-        input_element16 = driver.find_element(By.CSS_SELECTOR, '.css-8mmkcg')
-        input_element16.click()
+    input_element16 = driver.find_element(By.CSS_SELECTOR, '.css-8mmkcg')
+    input_element16.click()
 
-        # Click the 3rd element
-        third_element.click()
+    elements2025 = driver.find_elements(By.CLASS_NAME, "css-10wo9uf-option")
 
-        """input_element36 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
-        input_element36.click()"""
-    else:
-        print("Less than 3 matching elements found!")
+    print("Total elements found:", len(elements2025))
+
+    third_element = elements2025[1]
+    
+    # Click the 3rd element
+    third_element.click()
+
+    input_element36 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
+    input_element36.click()
 
     time.sleep(10)
 
