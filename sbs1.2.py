@@ -77,7 +77,6 @@ if __name__=='__main__':
 
     #Special thanks to Youtube, GeeksforGeeks and ChatGPT for this marvelous SBS 1.2
     
-    # Click the 3rd element
     input_element6 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-4')
     input_element6.click()
 
