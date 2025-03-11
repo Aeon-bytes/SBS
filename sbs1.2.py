@@ -27,7 +27,9 @@ else:
     print("The input must only be 'd' or 'c'")
 
 link=input("Link of level/slot page that want to be booked-1 (First slot):")
-link2=input("Link of level/slot page that want to be booked-2 (Third slot):")
+link2=input("Link of level/slot page that want to be booked-2:")
+link2slot=int(input("Slot option to be booked for second link(2/3/4/5/6):"))
+link2slot1=link2slot-1
 
 if __name__=='__main__':
     stop_time = temptime
@@ -67,10 +69,8 @@ if __name__=='__main__':
     input_element3 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
     input_element3.click()
 
-    # Open a new tab
     driver.execute_script("window.open('');")
 
-    # Switch to the new tab and open another URL
     driver.switch_to.window(driver.window_handles[1])
     driver.get(link2)
     time.sleep(1)
@@ -83,14 +83,13 @@ if __name__=='__main__':
     input_element16 = driver.find_element(By.CSS_SELECTOR, '.css-8mmkcg')
     input_element16.click()
 
-    elements2025 = driver.find_elements(By.CLASS_NAME, "css-10wo9uf-option")
+    elementslist = driver.find_elements(By.CLASS_NAME, "css-10wo9uf-option")
 
-    print("Total elements found:", len(elements2025))
+    print("Total elements found:", len(elementslist))
 
-    third_element = elements2025[1]
+    custom_element = elementslist[link2slot1]
     
-    # Click the 3rd element
-    third_element.click()
+    custom_element.click()
 
     input_element36 = driver.find_element(By.CSS_SELECTOR, '.bg-primary.p-2.text-md.w-full.text-white.tracking-wider.rounded.mt-2')
     input_element36.click()
