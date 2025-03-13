@@ -29,7 +29,7 @@ else:
 link=input("Link of level/slot page that want to be booked-1 (First slot):")
 link2=input("Link of level/slot page that want to be booked-2:")
 link2slot=int(input("Slot option to be booked for second link(2/3/4/5/6):"))
-link2slot1=link2slot-1
+link2slot1=link2slot-2
 
 if __name__=='__main__':
     stop_time = temptime
@@ -73,7 +73,7 @@ if __name__=='__main__':
 
     driver.switch_to.window(driver.window_handles[1])
     driver.get(link2)
-    time.sleep(1)
+    time.sleep(0.5)
 
     #Special thanks to Youtube, GeeksforGeeks and ChatGPT for this marvelous SBS 1.2
     
